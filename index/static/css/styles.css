@@ -5,11 +5,17 @@ body{
     margin: 5px;
 }
 
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 10px 20px;
+    padding: 1px 20px;
     background-color: #969696;
     border-radius: 5px;
 }
@@ -25,7 +31,7 @@ h1{
 }
 
 .div1{
-    padding: 10px;
+    padding: 1px;
     background-color: #969696;
     border-radius: 5px;
 }
@@ -33,6 +39,11 @@ h1{
 .div2{
     width: 400px;
     margin: auto;
+    align-items: center;
+}
+
+.divf{
+    width: 500px;
     align-items: center;
 }
 
@@ -74,13 +85,23 @@ nav a:hover span{
 
 .div3{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .div4{
     width: 50%;
-    padding: 5px;
+    padding: 2px;
     margin: 5px;
     flex: 1;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .pi{
@@ -96,22 +117,29 @@ img{
 }
 
 footer {
-    background-color: #a09d9d;
-    border-radius: 5px;
-    padding: 20px 0;
+    background-color: #ffffff;
+    border-top: solid 1px #000000;
+    padding: 10px 0;
     text-align: center;
+    align-items: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .contact-info,
-.copyright-info,
 .other-info {
     flex: 1;
+}
+
+.copyright-info{
+    flex: 1;
+    padding-left: 0px;
 }
 
 .contact-info h3 {
@@ -265,4 +293,10 @@ button[type="submit"]:hover {
 
 .style-btn:hover{
     background-color: rgb(31, 143, 109);
+}
+
+.lognBtn {
+    border: #000000;
+    border-radius: 5px;
+    color: white;
 }

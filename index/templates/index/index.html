@@ -5,104 +5,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CourseIT</title>
+    <title>CourseIT Academy</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <div class="header">
-        <div class="div1">
-            <h1>CourseIT</h1>
-        </div>
-        <div>
-            <nav>
-                <a href="login.html">Login<span></span></a>
-                <a href="signup.html">Sign Up<span></span></a>
-            </nav>
-        </div>
-    </div>
-    
-
-    <div class="spacer"></div>
-
-    <div class="div2">
-        <nav>
-            <a href="index.html">Home<span></span></a>
-            <a href="courses.html">Courses<span></span></a>
-            <a href="about.html">About<span></span></a>
-            <a href="contacts.html">Contacts<span></span></a>
-        </nav>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="div3">
-        <div class="div4">
-            <img src="./pictures/pexels-christina-morillo-1181298.jpg" alt="programming books image">
-        </div>
-        <div class="div4">
-            <p>Welcome to our platform, where the world of Computer Science unfolds at your fingertips! Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.
-
-                Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
-        </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="div3">
-        <div class="div4">
-            <p>Step into the dynamic world of Information Technology and embark on a journey of exploration and innovation with our comprehensive resources. Our platform is designed to empower tech enthusiasts like you to stay ahead in today's rapidly evolving IT landscape. Whether you're a beginner seeking foundational knowledge or an experienced professional aiming to expand your expertise, our platform offers something for everyone.
-
-                Engage with interactive tutorials, hands-on projects, and expert-led guides crafted to enhance your IT proficiency. Explore the latest trends and emerging technologies, and equip yourself with the skills required to thrive in the digital era</p>
-        </div>
-        <div class="div4">
-            <img src="./pictures/pexels-antoni-shkraba-4348401.jpg" alt="programming books image">
-        </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="div3">
-        <div class="div4">
-            <img src="./pictures/pexels-christina-morillo-1181359.jpg" alt="programming books image">
-        </div>
-        <div class="div4">
-            <p>Experience the power of community and unlock a world of exclusive membership benefits with us. Our platform is more than just a repository of resources; it's a thriving community of passionate learners, industry experts, and aspiring professionals coming together to share knowledge, collaborate, and grow. As a member, you gain access to a plethora of premium content curated to elevate your learning experience. Participate in live webinars conducted by industry leaders, engage in thought-provoking discussions, and connect with like-minded individuals from around the globe.</p>
-        </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div>
-        <p>But that's not all! Enjoy exclusive discounts on courses, certifications, and events, tailor-made to support your professional growth. Whether you're advancing your career in tech or simply exploring new horizons, our platform provides the tools, resources, and support you need to succeed.
-
-            Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-
-            <div class="div2">
+    <div class="content">
+        <div class="header">
+            <div class="div1">
+                <h1><a style="text-decoration: none;"href="{% url 'index' %}">CourseIT</a></h1>
+            </div>
+            <div>
                 <nav>
-                    <a href="index.html">Home<span></span></a>
-                    <a href="courses.html">Courses<span></span></a>
-                    <a href="about.html">About<span></span></a>
-                    <a href="contacts.html">Contacts<span></span></a>
+                    <a class="lognBtn" href="login.html">Login<span></span></a>
+                    <a href="signup.html">Sign Up<span></span></a>
                 </nav>
             </div>
+        </div>
         
 
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Email: globalcourseit@gmail.com</p>
-                <p>Phone: +254-745678905</p>
-            </div>
+        <div class="spacer"></div>
 
-            <div class="copyright-info">
-                <p>&copy; 2024 CourseIT. All rights reserved.</p>
+        <div class="div2">
+            <nav>
+                <a href="index.html">Home<span></span></a>
+                <a href="courses.html">Courses<span></span></a>
+                <a href="about.html">About<span></span></a>
+                <a href="contacts.html">Contacts<span></span></a>
+            </nav>
+        </div>
+
+       
+
+        <div class="spacer"></div>
+
+        <div class="div3">
+            <div class="div4">
+                <img src="{% static 'images/pexels-christina-morillo-1181298.jpg' %}" alt="programming books image">
+            </div>
+            <div class="div4">
+                <h1><u>Welcome To CourseIT</u></h1>
+                <p>Welcome to our platform, where the world of Computer Science unfolds at your fingertips! Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.
+
+                    Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
             </div>
         </div>
-    </footer>
+
+        <div class="spacer"></div>
+
+        <div class="div3">
+            <div class="div4">
+                {% for post in course_list %}
+                <div class="post-entry">
+                    {% if forloop.counter == 1 %}
+                        <h2><a style="text-decoration: none;" href="">{{ post.title }}</a></h2>
+                        <p>{{ post.description }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="div4">
+                <img src="{% static 'images/pexels-antoni-shkraba-4348401.jpg' %}" alt="programming books image">
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="div3">
+            <div class="div4">
+                <img src="{% static 'images/pexels-christina-morillo-1181359.jpg' %}" alt="programming books image">
+            </div>
+            <div class="div4">
+                {% for post in course_list %}
+                <div class="post-entry">
+                    {% if forloop.counter == 2 %}
+                        <h2><a style="text-decoration: none;" href="">{{ post.title }}</a></h2>
+                        <p>{{ post.description }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div>
+            <p>But that's not all! Enjoy exclusive discounts on courses, certifications, and events, tailor-made to support your professional growth. Whether you're advancing your career in tech or simply exploring new horizons, our platform provides the tools, resources, and support you need to succeed.
+
+                Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
+        </div>
+
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: globalcourseit@gmail.com</p>
+            <p>Phone: +254-745678905</p>
+        </div>
+
+    </div>
     
-    
+
+        <footer>
+            <div class="footer-content">
+
+                <div class="divf">
+                    <nav>
+                        <a href="index.html">Home<span></span></a>
+                        <a href="courses.html">Courses<span></span></a>
+                        <a href="about.html">About<span></span></a>
+                        <a href="contacts.html">Contacts<span></span></a>
+                    </nav>
+                </div>
+
+                <div class="copyright-info">
+                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    {% comment %} </div> {% endcomment %}
 </body>
 </html>
