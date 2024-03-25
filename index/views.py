@@ -13,3 +13,6 @@ class BlogListView(ListView):
 class CoursesView(ListView):
     model = Course
     template_name = "index/courses.html"
+
+def about(request):
+    return render(request,"index/about.html")
