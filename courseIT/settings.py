@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "index.apps.IndexConfig",
     "django.contrib.admin",
-    "django.contrib.auth",
+    "django.contrib.auth", #Yoohoo
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",

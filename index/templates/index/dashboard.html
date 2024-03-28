@@ -1,0 +1,70 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseIT Academy</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="header">
+            <div class="div1">
+                <h2><a style="text-decoration: none;"href="{% url 'dashboard' %}">Dashboard</a></h2>
+            </div>
+            <div>
+                <nav>
+                    <a href="">Hi, {{request.user}} <span></span></a>
+                    <a href="{% url 'sign-out' %}">Logout<span></span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="course-disp">
+
+            {%for course in course_list %}
+            <div class="post-entry">
+                <div>
+                    <img src="{{ course.image.url }}" width="100%" height="200px">
+                </div>
+                <div class="course-title">
+                    <h2 class="post-title" ><a style="text-decoration: none;" href="">{{ course.title }}</a></h2>
+                </div>
+                <div class="course-desc">
+                    <p>{{ course.description }}</p>
+                </div>
+                <div class="view-cos">
+                    <a class="get-started-btn" href="{% url 'course_detail' course.pk %}">View Course</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+        <footer>
+            <div>
+                <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
+            </div>
+    
+            <div class="footer-content">
+
+                <div class="divf">
+                    <nav>
+                        <a href="index.html">Home<span></span></a>
+                        <a href="courses.html">Courses<span></span></a>
+                        <a href="about.html">About<span></span></a>
+                        <a href="contacts.html">Contacts<span></span></a>
+                    </nav>
+                </div>
+
+                <div class="copyright-info">
+                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

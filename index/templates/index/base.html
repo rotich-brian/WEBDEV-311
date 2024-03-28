@@ -29,13 +29,13 @@
                                 <li><a href="{% url 'about' %}">About</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{% url 'dashboard' %}">Contact</a></li>
                             </ul>
                             <ul>
-                                <button class="sign-in"><a href="#">Sign In</a></button>
+                                <button class="sign-in"><a href="{% url 'sign-in' %}">Sign In</a></button>
                             </ul>
                             <ul>
-                                <button class="sign-up"><a href="#">Get Started</a></button>
+                                <button class="sign-up"><a href="{% url 'sign-up' %}">Sign Up</a></button>
                             </ul>
                         </div>
 
@@ -142,13 +142,15 @@
         </section>
 
         <script>
-            const getStartedBtn = document.getElementById('getStartedBtn');
-        
-            function flickerButton() {
-                getStartedBtn.classList.toggle('flicker');
-            }
-        
-            setInterval(flickerButton, 3000); // Change appearance every 3 seconds
+            window.onload = function() {
+                const getStartedBtn = document.getElementById('getStartedBtn');
+            
+                function flickerButton() {
+                    getStartedBtn.classList.toggle('flicker');
+                }
+            
+                setInterval(flickerButton, 3000); // Change appearance every 3 seconds
+            };
         </script>
 
     </body>

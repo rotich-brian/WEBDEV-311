@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+
+/* Preload images */
+body::after {
+    content: url('path_to_image_1.jpg') url('path_to_image_2.jpg') url('path_to_image_3.jpg');
+    display: none;
+}
+
+
 .div3{
     display: flex;
     justify-content: center;
@@ -104,9 +112,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: url(hero-banner-cookied.jpg)no-repeat;
+    background: #c2bdbd;
+    /* background: url(hero-banner-cookied.jpg)no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 
 header {
@@ -230,11 +239,12 @@ label {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .course-disp .post-entry {
     margin: 10px 10px;
-    background-color: #ffffff;
+    background-color: #f7f1f1;
     padding: 10px 10px;
     border-radius: 10px;
     display: block;
@@ -356,6 +366,10 @@ label {
     header .logo {
         margin-left: -50px;
     }
+}
+
+.about-li {
+    margin-bottom: 20px;
 }
 
 

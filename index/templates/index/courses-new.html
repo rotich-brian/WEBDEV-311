@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CourseIT Academy - Courses</title>
+    <link rel="stylesheet" href="{% static "css/styles-base.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <div class="logo"><a href="{% url 'index' %}">CourseIT</a></div>
+
+                    <div class="navigation">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{% url 'courses' %}">Courses</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <button class="sign-in"><a href="{% url 'login' %}">Sign In</a></button>
+                        </ul>
+                        <ul>
+                            <button class="sign-up"><a href="#">Get Started</a></button>
+                        </ul>
+                    </div>
+
+                    <label for="check">
+                        <i class="fas fa-bars menu-btn"></i>
+                        <i class="fas fa-times close-btn"></i>
+                    </label>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="info">
+                <h2>Featured Courses</h2>
+                <div class="featured-courses">
+                    <div class="course">
+                        <img src="{% static 'images/course1.jpg' %}" alt="Course 1">
+                        <h3>Introduction to Programming</h3>
+                        <p>This course provides an introduction to programming using popular languages such as Python and JavaScript. Learn the basics of programming logic, syntax, and problem-solving.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="course">
+                        <img src="{% static 'images/course2.jpg' %}" alt="Course 2">
+                        <h3>Data Structures and Algorithms</h3>
+                        <p>Dive deeper into the world of algorithms and data structures. Understand how to analyze and implement efficient algorithms to solve complex problems.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="course">
+                        <img src="{% static 'images/course3.jpg' %}" alt="Course 3">
+                        <h3>Web Development Bootcamp</h3>
+                        <p>Get hands-on experience in building responsive and interactive websites. Learn HTML, CSS, JavaScript, and popular frameworks.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-info">
+                <h2>Additional Courses</h2>
+                <div class="course-list">
+                    <div class="course">
+                        <img src="{% static 'images/course4.jpg' %}" alt="Course 4">
+                        <h3>Machine Learning Fundamentals</h3>
+                        <p>Explore the fundamentals of machine learning, including algorithms, model training, and data preprocessing.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="course">
+                        <img src="{% static 'images/course5.jpg' %}" alt="Course 5">
+                        <h3>Mobile App Development with React Native</h3>
+                        <p>Learn to develop cross-platform mobile applications using React Native. Build apps for iOS and Android with a single codebase.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="course">
+                        <img src="{% static 'images/course6.jpg' %}" alt="Course 6">
+                        <h3>Advanced Java Programming</h3>
+                        <p>Take your Java skills to the next level with advanced topics such as multithreading, networking, and JavaFX.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="media-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-content">
+                <div class="divf">
+                    <nav>
+                        <a href="{% url 'index' %}">Home<span></span></a>
+                        <a href="{% url 'courses' %}">Courses<span></span></a>
+                        <a href="{% url 'about' %}">About<span></span></a>
+                        <a href="#">Contacts<span></span></a>
+                    </nav>
+                </div>
+                <div class="copyright-info">
+                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        const getStartedBtn = document.getElementById('getStartedBtn');
+    
+        function flickerButton() {
+            getStartedBtn.classList.toggle('flicker');
+        }
+    
+        setInterval(flickerButton, 3000); // Change appearance every 3 seconds
+    </script>
+</body>
+</html>
