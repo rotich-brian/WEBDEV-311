@@ -8,7 +8,7 @@ urlpatterns = [
 
     path("course/<int:pk>/", views.CourseDetailView.as_view(), name="course_detail"),
 
-    path("signu-p/",views.register,name="sign-up"),
+    path("sign-up/",views.register,name="sign-up"),
     path("sign-in/",views.signin,name="sign-in"),
     path("sign-out/",views.logoutUser,name="sign-out"),
 
