@@ -147,6 +147,9 @@ MEDIA_URL = "/images/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"images/")
 
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+
 # Static file serving.
 # https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
 STORAGES = {
