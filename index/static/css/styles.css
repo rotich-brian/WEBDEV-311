@@ -15,6 +15,40 @@ body{
     margin: 0 auto;
 }
 
+.content-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    /* padding: 20px; */
+    margin: 0 auto;
+}
+
+.content-div {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.content-div .side-bar {
+    height: 100%;
+    width: 20%;
+}
+
+.content-div .cos-detail {
+    width: 60%;
+    height: 100%;
+    background: red;
+}
+
+.content-div .more-info {
+    width: 20%;
+    height: 100%;
+    background: blue;
+}
+
+
 /* Courses Display */
 
 .course-disp {
