@@ -1,7 +1,7 @@
 body{
     justify-content: center;
     align-items: center;
-    background: #66636300;
+    background: hsl(0, 19%, 94%);
     margin: 5px;
 }
 
@@ -27,26 +27,74 @@ body{
 }
 
 .content-div {
-    height: 100px;
-    width: 100px;
-    display: inline-block;
+    height: 100%;
+    display: flex;
+    padding: 0 10px 10px 10px;
 }
 
 .content-div .side-bar {
     height: 100%;
     width: 20%;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.content-div .side-bar div {
+    padding: 5px;
+}
+
+.side-bar-divs {
+    border-bottom: solid gray;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.content-div .side-bar div h1 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .content-div .cos-detail {
     width: 60%;
     height: 100%;
-    background: red;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.content-div .cos-detail .content {
+    padding: 20px;
 }
 
 .content-div .more-info {
     width: 20%;
     height: 100%;
-    background: blue;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-div .more-info div {
+    padding: 5px;
+}
+
+.more-info-divs {
+    border-bottom: solid gray;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(0, 19%, 94%);
+    padding: 5px;
+}
+
+.content-div .more-info div h1 {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 
@@ -118,7 +166,7 @@ body{
     justify-content: space-between;
     align-items: center; 
     padding: 1px 20px;
-    background-color: hsl(0, 19%, 94%);
+    background-color: white;
     border-radius: 5px;
 }
 

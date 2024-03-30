@@ -23,35 +23,76 @@
             </div>
         </div>
 
-        <div class="content">
+        
 
-
-            {% comment %} <div class="post-entry">
-                <h2>{{ course.title }}</h2>
-                <p>{{ course.description }}</p>
-            </div> {% endcomment %}
-
-            <div class="post-entry">
+        <div class="content-div">
+            <div class="side-bar">
                 <div>
-                    <img src="{{ course.image.url }}" width="100%" height="200px">
-                </div>
-                <div class="course-title">
-                    <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
-                </div>
-                <div class="course-desc">
-                    <p>{{ course.description }}</p>
-                </div>
-                <div class="view-cos">
-                    <a class="get-started-btn" href="{% url 'course_detail' course.pk %}">Start Course</a>
+                    <div class="side-bar-divs">
+                        <h1>My Learning</h1>
+                    </div>
+                    <div class="side-bar-divs">
+                        <h1>My Progress</h1>
+                    </div>
+                    <div class="side-bar-divs">
+                        <h1>Timetable</h1>
+                    </div>
+                    <div class="side-bar-divs">
+                        <h1>Community</h1>
+                    </div>
                 </div>
             </div>
+            <div class="cos-detail">
+                <div class="content">
 
-        </div>
 
-        <div class="content-div" style="height: 100px; width:100px;">
-            <div class="side-bar"></div>
-            <div class="cos-detail"></div>
-            <div class="more-info"></div>
+                    {% comment %} <div class="post-entry">
+                        <h2>{{ course.title }}</h2>
+                        <p>{{ course.description }}</p>
+                    </div> {% endcomment %}
+        
+                    <div class="post-entry">
+                        <div>
+                            <img src="{{ course.image.url }}" width="100%">
+                        </div>
+                        <div class="course-title">
+                            <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
+                        </div>
+                        <div class="course-desc">
+                            <p>{{ course.description }}</p>
+                        </div>
+                        <div class="view-cos">
+                            <a class="get-started-btn" href="{% url 'course_detail' course.pk %}">Start Course</a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="more-info">
+
+                <div>
+                    <img src="{{ course.image.url }}" width="100%">
+                </div>
+
+                <div>
+                    <div class="more-info-divs">
+                        <h1>Weeks</h1>
+                        <h1>8</h1>
+                    </div>
+                    <div class="more-info-divs">
+                        <h1>Language</h1>
+                        <h1>English</h1>
+                    </div>
+                    <div class="more-info-divs">
+                        <h1>Skill Level</h1>
+                        <h1>Beginner</h1>
+                    </div>
+                    <div class="more-info-divs">
+                        <h1>Certificate</h1>
+                        <h1>Yes</h1>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <footer>
