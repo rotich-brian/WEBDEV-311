@@ -8,60 +8,59 @@
     <title>CourseIT Academy</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body>
-    <div class="nav-bar">
-        <div class="header">
-            <div class="div1">
-                <h2><a style="text-decoration: none;"href="{% url 'dashboard' %}">Dashboard</a></h2>
-            </div>
-            <div>
-                <nav>
-                    <a href="">Hi, {{request.user}} <span></span></a>
-                    <a href="{% url 'sign-out' %}">Logout<span></span></a>
-                </nav>
+    <body>
+        <div class="nav-bar">
+            <div class="header">
+                <div class="div1">
+                    <h2><a style="text-decoration: none;"href="{% url 'dashboard' %}">Dashboard</a></h2>
+                </div>
+                <div>
+                    <nav>
+                        {% comment %} <a href="">Hi, {{request.user}} <span></span></a> {% endcomment %}
+                        <a href="{% url 'sign-out' %}">Logout<span></span></a>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-{% comment %} 
-    <div class="content-div" style="height: 100px; width:100px;">
-        <div class="side-bar"></div>
-        <div class="cos-detail"></div>
-        <div class="more-info"></div>
-    </div> {% endcomment %}
 
-    <div class="content">
+        <div class="content">
 
 
-        {% comment %} <div class="post-entry">
-            <h2>{{ course.title }}</h2>
-            <p>{{ course.description }}</p>
-        </div> {% endcomment %}
-
-        <div class="post-entry">
-            <div>
-                <img src="{{ course.image.url }}" width="100%" height="200px">
-            </div>
-            <div class="course-title">
-                <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
-            </div>
-            <div class="course-desc">
+            {% comment %} <div class="post-entry">
+                <h2>{{ course.title }}</h2>
                 <p>{{ course.description }}</p>
+            </div> {% endcomment %}
+
+            <div class="post-entry">
+                <div>
+                    <img src="{{ course.image.url }}" width="100%" height="200px">
+                </div>
+                <div class="course-title">
+                    <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
+                </div>
+                <div class="course-desc">
+                    <p>{{ course.description }}</p>
+                </div>
+                <div class="view-cos">
+                    <a class="get-started-btn" href="{% url 'course_detail' course.pk %}">Start Course</a>
+                </div>
             </div>
-            <div class="view-cos">
-                <a class="get-started-btn" href="{% url 'course_detail' course.pk %}">Start Course</a>
-            </div>
+
         </div>
 
-    </div>
-    
+        <div class="content-div" style="height: 100px; width:100px;">
+            <div class="side-bar"></div>
+            <div class="cos-detail"></div>
+            <div class="more-info"></div>
+        </div>
+        
         <footer>
             <div>
                 <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
             </div>
-    
-            <div class="footer-content">
 
-                <div class="divf">
+            <div class="footer-nav">
+                <div>
                     <nav>
                         <a href="index.html">Home<span></span></a>
                         <a href="courses.html">Courses<span></span></a>
@@ -70,10 +69,17 @@
                     </nav>
                 </div>
 
+                <div class="media-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
                 <div class="copyright-info">
                     <p>&copy; 2024 CourseIT. All rights reserved.</p>
                 </div>
+
             </div>
         </footer>
-</body>
+    </body>
 </html>

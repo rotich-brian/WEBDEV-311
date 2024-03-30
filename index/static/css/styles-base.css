@@ -333,6 +333,10 @@ label {
         flex-direction: column;
         padding: 10px 0;
     }
+
+    .footer-nav .copyright-info {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 600px){
