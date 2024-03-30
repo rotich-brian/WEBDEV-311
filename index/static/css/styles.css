@@ -66,6 +66,10 @@ a {
     font-weight: 500;
 }
 
+.content-div .side-bar2 {
+    display: none;
+}
+
 .content-div .cos-detail {
     width: 60%;
     height: 100%;
@@ -417,6 +421,15 @@ button[type="submit"]:hover {
     color: white;
 }
 
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
 /* SCREEN SIZES */
 @media (max-width: 960px) {
 
@@ -427,6 +440,14 @@ button[type="submit"]:hover {
     }
 
     .content-div .side-bar {
+        display: none;
+    }
+
+    #check:checked ~ .content-div .side-bar2 {
+        display: block;
+    }
+
+    .content-div .side-bar,.side-bar2 {
         height: 100%;
         width: 100%;
         margin: 5px;
@@ -434,18 +455,29 @@ button[type="submit"]:hover {
         background-color: white;
     } 
 
-    .side-bar div{
-        display: flex;
-        border: solid rgb(64, 0, 255);
-        border-width: 1px;
-        border-radius: 5px;
-        justify-content: space-around;
+    label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
     }
 
-    .content-div .side-bar div h1 {
+    label:hover {
+        color: #3c00ff;
+    }
+
+    .content-div .side-bar div h1,.side-bar2 div h1 {
         color: #000000;
         font-size: 17px;
         font-weight: 500;
+    }
+
+    .side-logout {
+        font-size: 17px;
+        font-weight: 600;
+        color: rgb(11, 1, 54);
+        text-transform: uppercase;
     }
 
     .content-div .cos-detail {
@@ -457,6 +489,10 @@ button[type="submit"]:hover {
     }
 
     .content-div .more-info {
+        display: none;
+    }
+
+    .main-logout {
         display: none;
     }
 
