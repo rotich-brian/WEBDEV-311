@@ -32,10 +32,10 @@
                                 <li><a href="{% url 'dashboard' %}">Contact</a></li>
                             </ul>
                             <ul>
-                                <button class="sign-in"><a href="{% url 'sign-in' %}">Sign In</a></button>
+                                <li><a href="{% url 'sign-in' %}">Sign In</a></li>
                             </ul>
                             <ul>
-                                <button class="sign-up"><a href="{% url 'sign-up' %}">Sign Up</a></button>
+                                <a class="sign-up" href="{% url 'sign-up' %}">Get Started</a>
                             </ul>
                         </div>
 
@@ -51,7 +51,7 @@
                 <div class="info">
                     <h2>Learn. <span>Code.</span> Grow!</h2>
                     <p class="p" >Welcome to our platform, where the world of Computer Science unfolds at your fingertips!</p>
-                    <a id="getStartedBtn" class="get-started-btn" href="">Get Started</a>
+                    <a class="get-started-btn" href="">Get Started</a>
 
                 
 
@@ -65,9 +65,9 @@
                     </div>
                     <div class="div4">
                         <h1><u>Welcome To CourseIT</u></h1>
-                        <p>Welcome to our platform, where the world of Computer Science unfolds at your fingertips! Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.
-        
-                            Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
+                        <p>Welcome to our platform, where the world of Computer Science unfolds at your fingertips! Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. </p>
+                        <p>Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.</p>
+                        <p>Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
                     </div>
                 </div>
 
@@ -75,15 +75,7 @@
                     <div class="div4">
                         <div class="div4">
                             <h1><u>Software Engineering</u></h1>
-                            <p>This module unit is intended to introduce the trainee to Information Communication Technology, equipping him/her with the necessary knowledge, skills, and attitude to enable him/her professional work with different programming languages.
-
-                                Course Module Description
-                                
-                                This module unit is intended to introduce the trainee to Information Communication
-                                
-                                Technology, equipping him/her with the necessary knowledge, skills, and attitude
-                                
-                                to enable him/her professional work with different programming languages.</p>
+                            <p>This module unit is intended to introduce the trainee to Information Communication Technology, equipping the learner with the necessary knowledge, skills, and attitude to enable them pursue professional work with different programming languages.</p>
                         </div>
                     </div>
                     <div class="div4">
@@ -97,12 +89,9 @@
                     </div>
                     <div class="div4">
                         <h1><u>Python Programming</u></h1>
-                        <p>Python is a high-level programming language designed to be highly readable.
-
-                            Course Module Description
-                            
-                            Python is a high-level programming language designed to be highly readable. It uses English like statements and keywords to create a software. It is a multipurpose programming language in that it can be used for web development, creating mobile applications, hacking, automation, machine learning and data science.
-                            </p>
+                            <p>Python is a high-level programming language designed to be highly readable. </p> 
+                            <p>It uses English like statements and keywords to create a software.</p>
+                             <p>It is a multipurpose programming language in that it can be used for web development, creating mobile applications, hacking, automation, machine learning and data science.</p>
                     </div>
                 </div>
 
@@ -111,21 +100,18 @@
                     <p>Email: globalcourseit@gmail.com</p>
                     <p>Phone: +254-745678905</p>
                 </div>
-
+                
+                <div>
+                    <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
+                </div>
+    
             </div>
 
             <footer>
 
-                <div class="media-icons">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-    
-                </div>
+                <div class="footer-nav">
 
-                <div class="footer-content">
-    
-                    <div class="divf">
+                    <div>
                         <nav>
                             <a href="index.html">Home<span></span></a>
                             <a href="courses.html">Courses<span></span></a>
@@ -133,25 +119,20 @@
                             <a href="contacts.html">Contacts<span></span></a>
                         </nav>
                     </div>
-    
+
+                    <div class="media-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
                     <div class="copyright-info">
                         <p>&copy; 2024 CourseIT. All rights reserved.</p>
                     </div>
+
                 </div>
             </footer>
         </section>
-
-        <script>
-            window.onload = function() {
-                const getStartedBtn = document.getElementById('getStartedBtn');
-            
-                function flickerButton() {
-                    getStartedBtn.classList.toggle('flicker');
-                }
-            
-                setInterval(flickerButton, 3000); // Change appearance every 3 seconds
-            };
-        </script>
 
     </body>
 </html>
