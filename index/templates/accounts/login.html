@@ -13,14 +13,14 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: #ffffff !important;
+            background: #c2bdbd !important;
         }
 
         .user_card {
             width: 90%; /* Adjust the width to 90% */
             max-width: 400px; /* Limit maximum width for larger screens */
             margin: auto;
-            background: #ffffff;
+            background: #c2bdbd;
             position: relative;
             display: flex;
             justify-content: center;
@@ -68,6 +68,14 @@
             margin-top: 10px;
             font-size: 14px; /* Increase message font size */
         }
+
+        .logo a {
+            font-size: 40px;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
     </style>
 
 </head>
@@ -75,8 +83,9 @@
 <div class="container h-100">
     <div class="d-flex justify-content-center h-100">
         <div class="user_card">
+            <div class="logo d-flex justify-content-center"><a href="{% url 'index' %}">CourseIT</a></div>
             <div class="d-flex justify-content-center">
-                <h3 id="form-title">LOGIN</h3>
+                <h3 id="form-title">Log in</h3>
             </div>
             <div class="d-flex justify-content-center form_container">
                 <form method="POST" action="">
@@ -108,6 +117,22 @@
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
                     Don't have an account? <a href="{% url 'sign-up' %}" class="ml-2">Sign Up</a>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+
+                <div>
+                    <nav class="d-flex justify-content-center links" style="margin: 10px auto;">
+                        <a href="index.html" style="text-decoration: none; margin-left: 5px;">Home<span></span></a>
+                        <a href="courses.html" style="text-decoration: none; margin-left: 5px;">Courses<span></span></a>
+                        <a href="about.html" style="text-decoration: none; margin-left: 5px;">About<span></span></a>
+                        <a href="contacts.html" style="text-decoration: none; margin-left: 5px;">Contact<span></span></a>
+                    </nav>
+                </div>
+
+                <div class="copyright-info d-flex justify-content-center links" style="margin: 10px auto;">
+                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
                 </div>
             </div>
         </div>
