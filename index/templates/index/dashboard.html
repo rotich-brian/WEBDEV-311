@@ -16,7 +16,7 @@
             </div>
             <div>
                 <nav>
-                    <a href="">Hi, {{request.user}} <span></span></a>
+                    {% comment %} <a href="">Hi, {{request.user}} <span></span></a> {% endcomment %}
                     <a href="{% url 'sign-out' %}">Logout<span></span></a>
                 </nav>
             </div>
