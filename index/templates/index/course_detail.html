@@ -20,7 +20,7 @@
                     <nav>
                         <a class="main-logout" href="">Hi, {{request.user}} <span></span></a>
                         <a class="main-logout" href="{% url 'sign-out' %}">Logout<span></span></a>
-                        
+
                         <label for="check">
                             <i class="fas fa-bars menu-btn"></i>
                         </label>
@@ -71,9 +71,10 @@
                     <div class="side-bar-divs">
                         <h1>Community</h1>
                     </div></a>
+                    <a href="{% url 'sign-out' %}">
                     <div class="side-bar-divs">
                     <a class="side-logout" href="{% url 'sign-out' %}">Logout</a>
-                    </div>
+                    </div></a>
                 </div>
             </div>
 
