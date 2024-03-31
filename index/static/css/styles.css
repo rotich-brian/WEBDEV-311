@@ -430,6 +430,31 @@ label {
     display: none;
 }
 
+
+.footer-nav .media-icons {
+    margin: 10px 50px;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+}
+
+.media-icons a {
+    position: relative;
+    font-size: 25px
+}
+
+.media-icons a:hover {
+    transform: scale(1.5);
+}
+
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+
 /* SCREEN SIZES */
 @media (max-width: 960px) {
 
