@@ -28,6 +28,7 @@ class Dash_contact(ListView):
     model = Course
     template_name = "index/dashboard.html"
 
+@method_decorator(login_required(login_url='sign-in'), name='dispatch')
 class CourseDetailView(DetailView):
     model = Course
     template_name = "index/course_detail.html"

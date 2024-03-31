@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About CourseIT Academy</title>
+    <link rel="stylesheet" href="{% static "css/styles-base.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <nav class="navbar">
+                <div class="navdiv">
+                    <div class="logo"><a href="{% url 'index' %}">CourseIT</a></div>
+                    <div class="navigation">
+                        <ul>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{% url 'courses' %}">Courses</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <button class="sign-in"><a href="#">Sign In</a></button>
+                        </ul>
+                        <ul>
+                            <button class="sign-up"><a href="#">Get Started</a></button>
+                        </ul>
+                    </div>
+                    <label for="check">
+                        <i class="fas fa-bars menu-btn"></i>
+                        <i class="fas fa-times close-btn"></i>
+                    </label>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="info">
+                <h2>About CourseIT Academy</h2>
+                <p class="p">Welcome to CourseIT Academy, your gateway to the world of Computer Science! We are dedicated to providing high-quality, accessible, and comprehensive learning resources for individuals passionate about technology and coding.</p>
+                <p class="p">Our mission is to empower learners of all backgrounds to acquire valuable skills in programming, software development, and computer science concepts.</p>
+                <p class="p">Whether you're a complete beginner curious about the basics of coding or an experienced developer looking to delve into advanced topics, CourseIT Academy has something for you.</p>
+                <a class="get-started-btn" href="#">Get Started</a>
+            </div>
+
+            <div class="div3">
+                <div class="div4">
+                    <h1><u>Our Vision</u></h1>
+                    <p>At CourseIT Academy, we envision a future where technology is accessible to everyone. We strive to create a platform where individuals can learn, innovate, and collaborate to build a brighter tomorrow.</p>
+                </div>
+                <div class="div4">
+                    <img class="img-home" src="{% static 'images/pexels-christina-morillo-1181298.jpg' %}" alt="programming books image">
+                </div>
+            </div>
+
+            <div class="div3">
+                <div class="div4">
+                    <img class="img-home" src="{% static 'images/pexels-antoni-shkraba-4348401.jpg' %}" alt="programming books image">
+                </div>
+                <div class="div4">
+                    <h1><u>Our Mission</u></h1>
+                    <p>Our mission at CourseIT Academy is to democratize education in the field of Computer Science. We aim to provide accessible, affordable, and high-quality learning resources to individuals worldwide, enabling them to pursue rewarding careers in technology.</p>
+                </div>
+            </div>
+
+            <div class="div3">
+                <div class="div4">
+                    <h1><u>Why Choose CourseIT Academy?</u></h1>
+                    <p>Choosing CourseIT Academy means embarking on a learning journey designed to elevate your skills and expand your horizons. Here's why thousands of learners trust us:</p>
+                    <ul>
+                        <li class="about-li">Comprehensive Curriculum: Dive into a vast collection of programming languages, algorithms, data structures, and more.</li>
+                        <li class="about-li">Expert Instruction: Learn from industry experts and experienced instructors dedicated to your success.</li>
+                        <li class="about-li">Interactive Learning: Engage with hands-on tutorials, real-world projects, and case studies to apply your knowledge.</li>
+                        <li class="about-li">Flexible Learning: Access courses anytime, anywhere, and at your own pace.</li>
+                        <li class="about-li">Community Support: Join a thriving community of learners, collaborate on projects, and share insights.</li>
+                    </ul>
+                </div>
+                <div class="div4">
+                    <img class="img-home" src="{% static 'images/pexels-christina-morillo-1181359.jpg' %}" alt="programming books image">
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+                <p>Email: globalcourseit@gmail.com</p>
+                <p>Phone: +254-745678905</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-content">
+                <div class="divf">
+                    <nav>
+                        <a href="index.html">Home<span></span></a>
+                        <a href="courses.html">Courses<span></span></a>
+                        <a href="about.html">About<span></span></a>
+                        <a href="contacts.html">Contacts<span></span></a>
+                    </nav>
+                </div>
+                <div class="copyright-info">
+                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

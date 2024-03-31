@@ -29,13 +29,13 @@
                                 <li><a href="{% url 'about' %}">About</a></li>
                             </ul>
                             <ul>
-                                <li><a href="#contact-us">Contact</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                             <ul>
-                                <li><a href="{% url 'sign-in' %}">Sign In</a></li>
+                                <button class="sign-in"><a href="#">Sign In</a></button>
                             </ul>
                             <ul>
-                                <a class="sign-up" href="{% url 'sign-up' %}">Get Started</a>
+                                <button class="sign-up"><a href="#">Get Started</a></button>
                             </ul>
                         </div>
 
@@ -76,31 +76,12 @@
 
             </div>
 
-            <footer>
+            <div class="media-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
 
-                <div class="footer-nav">
-
-                    <div>
-                        <nav>
-                            <a href="{% url 'index' %}">Home<span></span></a>
-                            <a href="{% url 'courses' %}">Courses<span></span></a>
-                            <a href="{% url 'about' %}">About<span></span></a>
-                            <a href="#contact-us">Contacts<span></span></a>
-                        </nav>
-                    </div>
-
-                    <div class="media-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-
-                    <div class="copyright-info" id="contact-us">
-                        <p>&copy; 2024 CourseIT. All rights reserved.</p>
-                    </div>
-
-                </div>
-            </footer>
+            </div>
         </section>
 
     </body>

@@ -341,6 +341,10 @@ label {
         line-height: 50px;
     }
 
+    header {
+        padding: 30px 70px;
+    }
+
     /* .content .info h2 span{
     } */
 
