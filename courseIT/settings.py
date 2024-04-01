@@ -85,7 +85,7 @@ DATABASES = {
 
 
 if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('postgres://course_df9i_user:Egy2F2eajP2n5fUDKHpXNFqxBWEfY2Vz@dpg-co383po21fec738svp9g-a/course_df9i'))}
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     DATABASES = {
         'default': {
