@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-p8=4@%31uy@!80gn6em9_%p&re$u449_m1*dn*plj*ir*nr@or"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['webdev-311.onrender.com','127.0.0.1']
 
@@ -83,8 +83,9 @@ DATABASES = {
     }
 }
 
+
 if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('postgres://course_df9i_user:Egy2F2eajP2n5fUDKHpXNFqxBWEfY2Vz@dpg-co383po21fec738svp9g-a/course_df9i'))}
 else:
     DATABASES = {
         'default': {
