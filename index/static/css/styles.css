@@ -237,6 +237,8 @@ nav a:hover span{
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
     background-color: #ffffff;
     border-top: solid 1px #000000;
     padding: 10px 0;
