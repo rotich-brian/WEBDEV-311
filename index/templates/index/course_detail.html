@@ -10,147 +10,149 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
     <body>
-        <input type="checkbox" id="check">
-        <div class="nav-bar">
-            <div class="header">
-                <div class="div1">
-                    <h2><a style="text-decoration: none;"href="{% url 'dashboard' %}">Dashboard</a> | <span style="font-size:15px;"> {{ course.title }} </span></h2>
-                </div>
-                <div>
-                    <nav>
-                        <a class="main-logout" href="">Hi, {{request.user}} <span></span></a>
-                        <a class="main-logout" href="{% url 'sign-out' %}">Logout<span></span></a>
+        <section style="position: relative; min-height: 100vh;">
+            <input type="checkbox" id="check">
+            <div class="nav-bar">
+                <div class="header">
+                    <div class="div1">
+                        <h2><a style="text-decoration: none;"href="{% url 'dashboard' %}">Dashboard</a> | <span style="font-size:15px;"> {{ course.title }} </span></h2>
+                    </div>
+                    <div>
+                        <nav>
+                            <a class="main-logout" href="">Hi, {{request.user}} <span></span></a>
+                            <a class="main-logout" href="{% url 'sign-out' %}">Logout<span></span></a>
 
-                        <label for="check">
-                            <i class="fas fa-bars menu-btn"></i>
-                        </label>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        
-
-        <div class="content-div">
-            <div class="side-bar">
-                <div>
-                    <a href="{% url 'course_detail' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Overview</h1>
-                    </div></a>
-                    <a href="{% url 'progress' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>My Progress</h1>
-                    </div></a>
-                    <a href="{% url 'materials' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Materials</h1>
-                    </div></a>
-                    <a href="{% url 'community' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Community</h1>
-                    </div></a>
+                            <label for="check">
+                                <i class="fas fa-bars menu-btn"></i>
+                            </label>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
-            <div class="side-bar2">
-                <div>
-                    <a href="{% url 'course_detail' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Overview</h1>
-                    </div></a>
-                    <a href="{% url 'progress' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>My Progress</h1>
-                    </div></a>
-                    <a href="{% url 'materials' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Materials</h1>
-                    </div></a>
-                    <a href="{% url 'community' course.pk %}">
-                    <div class="side-bar-divs">
-                        <h1>Community</h1>
-                    </div></a>
-                    <a href="{% url 'sign-out' %}">
-                    <div class="side-bar-divs">
-                    <a class="side-logout" href="{% url 'sign-out' %}">Logout</a>
-                    </div></a>
-                </div>
-            </div>
+            
 
-            <div class="cos-detail">
-                <div class="content">
-        
-                    <div class="post-entry">
-                        <div>
-                            <img src="{{ course.image.url }}" width="100%">
+            <div class="content-div">
+                <div class="side-bar">
+                    <div>
+                        <a href="{% url 'course_detail' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Overview</h1>
+                        </div></a>
+                        <a href="{% url 'progress' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>My Progress</h1>
+                        </div></a>
+                        <a href="{% url 'materials' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Materials</h1>
+                        </div></a>
+                        <a href="{% url 'community' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Community</h1>
+                        </div></a>
+                    </div>
+                </div>
+
+                <div class="side-bar2">
+                    <div>
+                        <a href="{% url 'course_detail' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Overview</h1>
+                        </div></a>
+                        <a href="{% url 'progress' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>My Progress</h1>
+                        </div></a>
+                        <a href="{% url 'materials' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Materials</h1>
+                        </div></a>
+                        <a href="{% url 'community' course.pk %}">
+                        <div class="side-bar-divs">
+                            <h1>Community</h1>
+                        </div></a>
+                        <a href="{% url 'sign-out' %}">
+                        <div class="side-bar-divs">
+                        <a class="side-logout" href="{% url 'sign-out' %}">Logout</a>
+                        </div></a>
+                    </div>
+                </div>
+
+                <div class="cos-detail">
+                    <div class="content">
+            
+                        <div class="post-entry">
+                            <div>
+                                <img src="{{ course.image.url }}" width="100%">
+                            </div>
+                            <div class="course-title">
+                                <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
+                            </div>
+                            <div class="course-desc">
+                                <p>{{ course.description }}</p>
+                            </div>
+                            <div class="view-cos">
+                                <a class="get-started-btn" href="https://www.researchgate.net/profile/Maruf-Mia-4/publication/374546241_Competitive_Programming_Roadmap/data/65237f36b0df2f20a21ffcb8/Competitive-Programming-Roadmap.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19">Download RoadMap</a>
+                            </div>
                         </div>
-                        <div class="course-title">
-                            <h2 class="post-title" ><a style="text-decoration: none;" href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></h2>
+            
+                    </div>
+                </div>
+                <div class="more-info">
+
+                    <div>
+                        <img src="{{ course.image.url }}" width="100%">
+                    </div>
+
+                    <div>
+                        <div class="more-info-divs">
+                            <h1>Weeks</h1>
+                            <h1>8</h1>
                         </div>
-                        <div class="course-desc">
-                            <p>{{ course.description }}</p>
+                        <div class="more-info-divs">
+                            <h1>Language</h1>
+                            <h1>English</h1>
                         </div>
-                        <div class="view-cos">
-                            <a class="get-started-btn" href="https://www.researchgate.net/profile/Maruf-Mia-4/publication/374546241_Competitive_Programming_Roadmap/data/65237f36b0df2f20a21ffcb8/Competitive-Programming-Roadmap.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19">Download RoadMap</a>
+                        <div class="more-info-divs">
+                            <h1>Skill Level</h1>
+                            <h1>Beginner</h1>
+                        </div>
+                        <div class="more-info-divs">
+                            <h1>Certificate</h1>
+                            <h1>Yes</h1>
                         </div>
                     </div>
-        
                 </div>
             </div>
-            <div class="more-info">
-
+            
+            <footer>
                 <div>
-                    <img src="{{ course.image.url }}" width="100%">
+                    <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
                 </div>
 
-                <div>
-                    <div class="more-info-divs">
-                        <h1>Weeks</h1>
-                        <h1>8</h1>
+                <div class="footer-nav">
+                    <div>
+                        <nav>
+                            <a href="{% url 'index' %}">Home<span></span></a>
+                            <a href="{% url 'courses' %}">Courses<span></span></a>
+                            <a href="{% url 'about' %}">About<span></span></a>
+                            <a href="{% url 'contact' %}">Contacts<span></span></a>
+                        </nav>
                     </div>
-                    <div class="more-info-divs">
-                        <h1>Language</h1>
-                        <h1>English</h1>
+
+                    <div class="media-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
                     </div>
-                    <div class="more-info-divs">
-                        <h1>Skill Level</h1>
-                        <h1>Beginner</h1>
+
+                    <div class="copyright-info">
+                        <p>&copy; 2024 CourseIT. All rights reserved.</p>
                     </div>
-                    <div class="more-info-divs">
-                        <h1>Certificate</h1>
-                        <h1>Yes</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <footer>
-            <div>
-                <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
-            </div>
 
-            <div class="footer-nav">
-                <div>
-                    <nav>
-                        <a href="{% url 'index' %}">Home<span></span></a>
-                        <a href="{% url 'courses' %}">Courses<span></span></a>
-                        <a href="{% url 'about' %}">About<span></span></a>
-                        <a href="{% url 'contact' %}">Contacts<span></span></a>
-                    </nav>
                 </div>
-
-                <div class="media-icons">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                </div>
-
-                <div class="copyright-info">
-                    <p>&copy; 2024 CourseIT. All rights reserved.</p>
-                </div>
-
-            </div>
-        </footer>
+            </footer>
+        </section>
     </body>
 </html>
