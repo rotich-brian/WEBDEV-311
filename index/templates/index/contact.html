@@ -49,23 +49,43 @@
 
             <div class="content">
 
-                <div style="display:flex; align-items:center;">
-                    <div class="info">
-                        <h2>Learn. <span>Code.</span> Grow!</h2>
-                        <p class="p" >Welcome to our platform, where the world of Computer Science unfolds at your fingertips!</p>
-                        <a class="get-started-btn" href="{% url 'sign-up' %}">Get Started</a>
+                <h2 style="margin:20px 0; color: #226A80;">Contact Us</h2>
 
-                        <p class="p1"> Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.</p>
+                <p>We'd love to hear from you! Feel free to reach out to us with any questions, feedback, or inquiries.</p>
+                <p>You can contact us via email or phone:</p> <br>
+                <ul>
+                    <li>Email: <a href="mailto:globalcourseit@gmail.com">globalcourseit@gmail.com</a></li> <br>
+                    <li>Phone: +254-745678905</li> <br>
+                </ul><br>
 
-                        
-                    </div>
+                <p class="p1"> Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs.</p>
 
-                    <div class="div4" style="width:100%;">
-                        <img class="img-home" src="{% static 'images/Home_LLP.png' %}" alt="Home LLP image">
-                    </div>
+                <h3 style="margin:20px 0;">Contact Form</h3>
+
+                <div class="container">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
                 
                 <div>
+                    <br>
                     <p>Join our community today and embark on a journey of learning, growth, and endless possibilities. Together, we'll shape the future of technology and empower each other to reach new heights.</p>
                 </div>
     

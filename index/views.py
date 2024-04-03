@@ -23,6 +23,9 @@ class CoursesView(ListView):
 def about(request):
     return render(request,"index/about.html")
 
+def contact(request):
+    return render(request,"index/contact.html")
+
 @method_decorator(login_required(login_url='sign-in'), name='dispatch')
 class Dash_contact(ListView):
     model = Course
