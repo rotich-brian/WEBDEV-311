@@ -8,6 +8,10 @@
     margin:30px 0;
 }
 
+#img-div5 {
+    display: none;
+}
+
 .div4{
     width: 100%;
     padding: 2px;
@@ -323,6 +327,14 @@ label {
 
     .div3 {
         flex-direction: column;
+    }
+
+    #img-div4 {
+        display: none;
+    }
+
+    #img-div5 {
+        display: block;
     }
 
     .footer-nav {

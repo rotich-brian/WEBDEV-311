@@ -468,6 +468,15 @@ label {
         display: none;
     }
 
+
+    .course-disp .post-entry h2{
+        font-size: 17px;
+    }
+
+    .div1 h2 {
+        font-size: 17px;
+    }
+
     #check:checked ~ .content-div .side-bar2 {
         display: block;
     }
