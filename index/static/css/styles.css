@@ -474,6 +474,10 @@ label {
     }
 
     .div1 h2 {
+        font-size: 16px;
+    }
+
+    .course-title h2 {
         font-size: 17px;
     }
 
@@ -508,10 +512,10 @@ label {
     }
 
     .side-logout {
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 600;
         color: rgb(11, 1, 54);
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
     }
 
     .content-div .cos-detail {
