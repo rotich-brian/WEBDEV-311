@@ -36,6 +36,21 @@ class CourseDetailView(DetailView):
     model = Course
     template_name = "index/course_detail.html"
 
+@method_decorator(login_required(login_url='sign-in'), name='dispatch')
+class CourseDetailView_progress(DetailView):
+    model = Course
+    template_name = "index/detail-progress.html"
+
+@method_decorator(login_required(login_url='sign-in'), name='dispatch')
+class CourseDetailView_materials(DetailView):
+    model = Course
+    template_name = "index/detail-materials.html"
+
+@method_decorator(login_required(login_url='sign-in'), name='dispatch')
+class CourseDetailView_community(DetailView):
+    model = Course
+    template_name = "index/detail-community.html"
+
 def signin(request):
 
     if request.user.is_authenticated:

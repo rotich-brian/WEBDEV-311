@@ -11,6 +11,9 @@ urlpatterns = [
     path("contact/",views.contact, name="contact"),
 
     path("course/<int:pk>/", views.CourseDetailView.as_view(), name="course_detail"),
+    path("course/<int:pk>/progress", views.CourseDetailView_progress.as_view(), name="progress"),
+    path("course/<int:pk>/materials", views.CourseDetailView_materials.as_view(), name="materials"),
+    path("course/<int:pk>/community", views.CourseDetailView_community.as_view(), name="community"),
 
     path("sign-up/",views.register,name="sign-up"),
     path("sign-in/",views.signin,name="sign-in"),
