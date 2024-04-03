@@ -2,106 +2,186 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale=1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CourseIT Academy</title>
-        <link rel="stylesheet" href=" {% static "css/styles-base.css" %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-    <body>
-        <section>
-            <input type="checkbox" id="check">
-            <header>
-                <nav class="navbar">
-                    <div class="navdiv">
-                        <div class="logo"><a href="{% url 'index' %}">CourseIT</a></div>
+    <title>Courses - CourseIT Academy</title>
+    <link rel="stylesheet" href="{% static "css/styles-base.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section>
+    <input type="checkbox" id="check">
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="{% url 'index' %}">CourseIT</a></div>
 
-                        <div class="navigation">
-                            <ul>
-                                <li><a href="{% url 'index' %}">Home</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="{% url 'courses' %}">Courses</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="{% url 'about' %}">About</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#contact-us">Contact</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="{% url 'sign-in' %}">Sign In</a></li>
-                            </ul>
-                            <ul>
-                                <a class="sign-up" href="{% url 'sign-up' %}">Get Started</a>
-                            </ul>
-                        </div>
-
-                        <label for="check">
-                            <i class="fas fa-bars menu-btn"></i>
-                            <i class="fas fa-times close-btn"></i>
-                        </label>
-                    </div>
-                </nav>
-            </header>
-
-            <div class="content1">
-                {% comment %} <div class="info">
-                    <h2>Learn. <span>Code.</span> Grow!</h2>
-                    <p>Welcome to our platform, where the world of Computer Science unfolds at your fingertips! Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs. <br> <br> Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
-                    <a class="get-started-btn" href="">Get Started</a>
-                </div> {% endcomment %}
-
-                <div class="course-disp">
-
-                    {%for course in course_list %}
-                    <div class="post-entry">
-                        <div>
-                            <img src="{{ course.image.url }}" width="100%" height="200px">
-                        </div>
-                        <div class="course-title">
-                            <h2 class="post-title" ><a style="text-decoration: none;" href="">{{ course.title }}</a></h2>
-                        </div>
-                        <div class="course-desc">
-                            <p>{{ course.description }}</p>
-                        </div>
-                        <div class="view-cos">
-                            <a class="get-started-btn" href="">View Course</a>
-                        </div>
-                    </div>
-                    {% endfor %}
+                <div class="navigation">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{% url 'courses' %}">Courses</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#contact-us">Contact</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{% url 'sign-in' %}">Sign In</a></li>
+                    </ul>
+                    <ul>
+                        <a class="sign-up" href="{% url 'sign-up' %}">Get Started</a>
+                    </ul>
                 </div>
 
+                <label for="check">
+                    <i class="fas fa-bars menu-btn"></i>
+                    <i class="fas fa-times close-btn"></i>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="courses">
+
+            <div>
+                <h2 style="color: #226A80;">Our Courses</h2>
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="{% static 'images/software.jpeg' %}" style="width:100%">
+                        <div class="text"> <h1>Software Engineering</h1><br>
+                            This module unit is intended to introduce the trainee to Information Communication Technology, equipping the learner with the necessary knowledge, skills, and attitude to pursue professional work with different programming languages.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="{% static 'images/Python.jpg' %}" style="width:100%">
+                        <div class="text"><br>
+                            Python is a high-level programming language designed to be highly readable.
+                            
+                            It uses English-like statements and keywords to create software.
+                            
+                            It is a multipurpose programming language used for web development, mobile applications, hacking, automation, machine learning, and data science.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="{% static 'images/database.jpeg' %}" style="width:100%">
+                        <div class="text">Database Programming(SQL)</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="{% static 'images/Dart.jpeg' %}" style="width:100%">
+                        <div class="text"><h1>Dart Programming</h1><br>
+
+                            Dart is a programming language that is used to develop applications using the Flutter framework. Flutter is an open-source mobile application development framework that is built on top of the Dart programming language.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="{% static 'images/web.jpeg' %}" style="width:100%">
+                        <div class="text"><br>
+                            Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network) Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="{% static 'images/business.jpeg' %}" style="width:100%">
+                        <div class="text"><h1>Business and Entrepreneurship</h1><br>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
 
-            <footer>
+            <div class="course">
+                <p>These modules are intended to introduce the trainee to Information Communication Technology, equipping the learner with the necessary knowledge, skills, and attitude to pursue professional work with different programming languages.</p>
+            </div>
 
-                <div class="footer-nav">
+            <br>
+            <h2 style="color: #226A80;">More About Courses</h2>
 
-                    <div>
-                        <nav>
-                            <a href="{% url 'index' %}">Home<span></span></a>
-                            <a href="{% url 'courses' %}">Courses<span></span></a>
-                            <a href="{% url 'about' %}">About<span></span></a>
-                            <a href="#contact-us">Contacts<span></span></a>
-                        </nav>
-                    </div>
+            <div class="course">
+                <p class="p1" style="margin-bottom:50px;"> Our vast collection of Computer Science materials caters to individuals at every stage of their learning journey. Whether you're just beginning to explore the realm of coding or you're a seasoned developer seeking advanced techniques, we have resources tailored to meet your needs. <br> <br> Dive into a treasure trove of programming languages, algorithms, data structures, and more. Our expertly curated content covers everything from the basics to the cutting-edge advancements in the field. With interactive tutorials, engaging projects, and real-world case studies, you'll embark on a transformative learning experience.</p>
+                <a class="get-started-btn" style="margin-bottom:20px;" href="{% url 'sign-up' %}">Get Started</a>
+            </div>
 
-                    <div class="media-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
+            <!-- Add more courses as needed -->
 
-                    <div class="copyright-info" id="contact-us">
-                        <p>&copy; 2024 CourseIT. All rights reserved.</p>
-                    </div>
+            
 
-                </div>
-            </footer>
-        </section>
 
-    </body>
+        </div>
+    </div>
+
+    <footer style="margin-top:20px;">
+        <div class="footer-nav">
+            <div>
+                <nav>
+                    <a href="{% url 'index' %}">Home<span></span></a>
+                    <a href="{% url 'courses' %}">Courses<span></span></a>
+                    <a href="{% url 'about' %}">About<span></span></a>
+                    <a href="#contact-us">Contacts<span></span></a>
+                </nav>
+            </div>
+
+            <div class="media-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <div class="copyright-info" id="contact-us">
+                <p>&copy; 2024 CourseIT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="{% static "css/main.js" %}"></script>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    </script>
+
+</body>
 </html>
